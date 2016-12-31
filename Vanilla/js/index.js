@@ -47,12 +47,12 @@ $(function() {
   var dark = true;
   $('#LightSwitch').on('click', function(){
     if(dark) {
-      $('#light-theme').attr('href', 'css/index-light.css');
-      $('#WebsiteThumb').attr('src', 'assets/grass.jpg');
+      $('#light-theme').attr('href', '../Resources/css/index-light.css');
+      $('#WebsiteThumb').attr('src', '../Resources/assets/grass.jpg');
       dark = false;
     } else {
       $('#light-theme').attr('href', '');
-      $('#WebsiteThumb').attr('src', 'assets/clouds.jpg');
+      $('#WebsiteThumb').attr('src', '../Resources/assets/clouds.jpg');
       dark = true;
     }
   });
@@ -74,10 +74,10 @@ $(function() {
   var redPill = true;
   $('#pill').on('click', function(){
     if(redPill) {
-      $('#pill').attr('src', 'assets/BluePill.svg');
+      $('#pill').attr('src', '../Resources/assets/BluePill.svg');
       $('.easteregg').removeClass('hidden');
     } else {
-      $('#pill').attr('src', 'assets/RedPill.svg');
+      $('#pill').attr('src', '../Resources/assets/RedPill.svg');
       $('.easteregg').addClass('hidden');
       $('.subsection-image img').removeClass('shake-slow shake-constant');
       if(canvasEnabled) {
