@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Gallery</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/album-gallery.css"/>
+
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-inverse topbar navbar-fixed-top navbar-locked transparent">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="index">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid music-art">
+        <div id="description" class="description">
+            <p>
+                Recently played music from Last.fm, many are from internet radio stations...
+            </p>
+        </div>
+
+        <div class="albums" ng-app="albumGallery" ng-controller="albumController">
+            <div id="main" class="main">
+                <a ng-repeat="album in albums" ng-href="{{album.url}}" target="_blank">
+                    <img ng-src="{{album.image[2]['#text']}}" class="album-art" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/album-galleryAngular.js"></script>
+</body>
+</html>

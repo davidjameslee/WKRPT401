@@ -1,0 +1,71 @@
+
+/*Navbar*/
+.navbar-locked {
+    /*Default Inverse Colours*/
+    background-color: #EEEEEE;
+}
+
+@media (min-width: 769px) {
+    .navbar-locked.transparent {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+.topbar li:hover{
+    background-color: #000000;
+}
+.navbar-locked.topbar a{
+    color: #000000 !important;
+}
+.topbar a:hover{
+    color: #FEFEFE !important;
+}
+
+.name-div {
+    background-image: url("../assets/grass.jpg");
+}
+
+.name-plate {
+    color: #008B8B;
+}
+
+.name-plate h1 {
+    color: #000000;
+}
+
+.name-plate span {
+    padding: 0px 5px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/*Content Sections*/
+
+/*Subsection*/
+.subsection {
+    background-color: #FEFEFE;
+    color: #000000;
+}
+.subsection-mask {
+    background-color: rgba(255,255,255, 0.70);
+}
+
+.intro {
+    background-image: url("../assets/grass.jpg");
+}
+
+hr {
+    background-color: #008B8B !important;
+}
+
+.contact-link a {
+    color: #008B8B;
+}
+.contact-link a:hover {
+    color: #000000;
+    background-color: transparent;
+}
+
+.contact-link-bar-text {
+    color: #000000;
+}

@@ -1,0 +1,35 @@
+
+body {
+    margin: 0;
+    background: #000000;
+}
+
+.topbar {
+    border: 0;
+    font-weight: bold;
+}
+
+.description {
+    color: #FFFFFF;
+    padding: 60px 20px 0 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.music-art{
+    background: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    text-align:center;
+}
+
+.album-art {
+    display:inline-block;
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
