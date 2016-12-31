@@ -5,9 +5,9 @@ app.controller('albumController', function($scope, $http){
     var desc = document.getElementById("description");
     var height = window.innerHeight - desc.clientHeight - navbar.clientHeight;
     var width = window.innerWidth - 20;
-    var vCount = Math.max(3, Math.floor(height/162));
-    var hCount = Math.max(1, Math.floor(width/162));
-    var albumCount = (vCount * hCount)-1;//Account for zero indexing on API
+    var vCount = Math.max(3, Math.floor(height/160));
+    var hCount = Math.max(1, Math.floor(width/160));
+    var albumCount = (vCount * hCount);//Account for zero indexing on API
     var url = 'http://ws.audioscrobbler.com/2.0/?' +
         'method=user.getRecentTracks&' +
         'limit=' + albumCount + '&' +
@@ -19,7 +19,7 @@ app.controller('albumController', function($scope, $http){
         $scope.albums = data.recenttracks.track;
         $scope.albums.forEach(function(element, index, array){
             if(element.image[2]['#text'].length == 0)
-                element.image[2]['#text'] = 'assets/missingalbum.png';
+                element.image[2]['#text'] = '../Resources/assets/missingalbum.png';
         });
     }).error(function(){
         alert('Error Getting Albums!');
