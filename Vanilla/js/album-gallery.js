@@ -39,7 +39,7 @@ $(function() {
                     if(data.recenttracks.track[i].image[2]["#text"].length > 0) {
                         album.src = data.recenttracks.track[i].image[2]["#text"];
                     } else {
-                        album.src = 'assets/missingalbum.png';
+                        album.src = '../Resources/assets/missingalbum.png';
                     }
 
                     //Add album to link and link to array
