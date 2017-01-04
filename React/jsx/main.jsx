@@ -1,5 +1,5 @@
 
-
+//JSON data for elements
 var jobs = [
     {
         title: 'Toronto Transit Commision',
@@ -44,6 +44,7 @@ var projects = [
     }
 ];
 
+//Job React Code
 function JobEntry(props) {
     return (
             <div className="col-xs-12 col-sm-6 col-md-4">
@@ -62,14 +63,50 @@ function JobEntry(props) {
 
 function JobEntries() {
     return <div>
-        {jobs.map(function(object) {
-            return <JobEntry title={object.title} subtitle={object.subtitle} imgUrl={object.imgUrl} />
+        {jobs.map(function(job) {
+            return <JobEntry title={job.title} subtitle={job.subtitle} imgUrl={job.imgUrl} />
         })}
     </div>;
 }
 
-const element = <JobEntries />;
+//Project React Code
+function ProjectEntry(props) {
+    var wip = null;
+    if (props.wip)
+        wip = <h4>(Work in Progress)</h4>;
+    return (
+        <div className="col-xs-12 col-sm-6 col-md-6">
+            <div className="subsection-entry">
+                <div className="subsection-image">
+                    <img src={props.imgUrl} />
+                </div>
+                <div className="subsection-description">
+                    <h3>{props.title}</h3>
+                    {wip}
+                    <h4><a href={props.link} target="_blank">Can be found here.</a></h4>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ProjectEntries() {
+    return <div>
+        {projects.map(function(project) {
+            return <ProjectEntry title={project.title} link={project.link} imgUrl={project.imgUrl} wip={project.wip} />
+        })}
+    </div>;
+}
+
+//Rendering of components
+const JobElement = <JobEntries />;
 ReactDOM.render(
-    element,
+    JobElement,
     document.getElementById('jobs')
+);
+
+const ProjectElement = <ProjectEntries />;
+ReactDOM.render(
+    ProjectElement,
+    document.getElementById('projects')
 );
