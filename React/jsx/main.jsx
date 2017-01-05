@@ -43,6 +43,28 @@ var projects = [
         wip: false
     }
 ];
+var contactLinks = [
+    {
+        link: 'https://www.linkedin.com/in/dj6lee',
+        icon: 'fa-linkedin-square',
+        className: 'link-linkedin'
+    },
+    {
+        link: 'http://www.last.fm/user/TheBroccOLee',
+        icon: 'fa-lastfm-square',
+        className: 'link-lastfm'
+    },
+    {
+        link: 'https://github.com/davidjameslee',
+        icon: 'fa-github-square',
+        className: 'link-github'
+    },
+    {
+        link: 'mailto:info@djlee.xyz',
+        icon: 'fa-envelope-square',
+        className: 'link-email'
+    }
+];
 
 //Job React Code
 function JobEntry(props) {
@@ -98,6 +120,36 @@ function ProjectEntries() {
     </div>;
 }
 
+//Footer Contact Links
+function ContactLink(props) {
+    return (
+        <div  className={"contact-link " + props.className}>
+            <a href={props.link}>
+                <i className={"fa " + props.icon}></i>
+            </a>
+        </div>
+    )
+}
+function ContactLinks() {
+    return <div>
+        {contactLinks.map(function(link) {
+            return <ContactLink className={link.className} link={link.link} icon={link.icon} />
+        })}
+    </div>
+}
+function ContactFooter() {
+    return (
+        <div className="contact-link-bar">
+            <ContactLinks />
+            <div className="contact-link-bar-text"></div>
+
+            <div className="footer-drawer-toggle">
+                <i id="footer-toggle-button" className="fa fa-angle-double-up"></i>
+            </div>
+        </div>
+    )
+}
+
 //Rendering of components
 const JobElement = <JobEntries />;
 ReactDOM.render(
@@ -109,4 +161,10 @@ const ProjectElement = <ProjectEntries />;
 ReactDOM.render(
     ProjectElement,
     document.getElementById('projects')
+);
+
+const ContactFooterElement = <ContactFooter />
+ReactDOM.render(
+    ContactFooterElement,
+    document.getElementById('footer')
 );
