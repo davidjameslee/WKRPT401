@@ -116,39 +116,14 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<h2>Work</h2>
 				<hr>
-				<!-- TTC -->
-				<div class="col-xs-12 col-sm-6 col-md-4">
+				<div v-for="job in jobs" class="col-xs-12 col-sm-6 col-md-4">
 					<div class="subsection-entry">
 						<div class="subsection-image">
-							<img src="../Resources/assets/TTCLOGO.png">
+							<img :src="job.imgUrl" />
 						</div>
 						<div class="subsection-description">
-							<h3>Toronto Transit Commission</h3>
-							<h4>C#.NET, Oracle & Crystal Reports Developer</h4>
-						</div>
-					</div>
-				</div>
-				<!-- IBI Group -->
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<div class="subsection-entry">
-						<div class="subsection-image">
-							<img src="../Resources/assets/IBIGROUPLOGO.jpg">
-						</div>
-						<div class="subsection-description">
-							<h3>IBI Group</h3>
-							<h4>Junior Developer</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Veeva Systems -->
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<div class="subsection-entry">
-						<div class="subsection-image">
-							<img src="../Resources/assets/VEEVALOGO.jpg">
-						</div>
-						<div class="subsection-description">
-							<h3>Veeva Systems</h3>
-							<h4>Intern Performance Engineer</h4>
+							<h3>{{job.title}}</h3>
+							<h4>{{job.subtitle}}</h4>
 						</div>
 					</div>
 				</div>
@@ -161,52 +136,15 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<h2>Projects</h2>
 				<hr>
-				<!-- Pebble -->
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div v-for="project in projects" class="col-xs-12 col-sm-6 col-md-6">
 					<div class="subsection-entry">
 						<div class="subsection-image">
-							<img src="../Resources/assets/PebblePulseSS.png">
+							<img :src="project.imgUrl">
 						</div>
 						<div class="subsection-description">
-							<h3>Pebble Watchface</h3>
-							<h4><a href="https://apps.getpebble.com/applications/55aa77fbc380d0dd7c00009e" target="_blank">Can be found here.</a></h4>
-						</div>
-					</div>
-				</div>
-				<!-- List App -->
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="subsection-entry">
-						<div class="subsection-image">
-							<img src="../Resources/assets/ListAppSS.JPG">
-						</div>
-						<div class="subsection-description">
-							<h3>List Application</h3>
-							<h4>(Work in Progress)</h4>
-							<h4><a href="https://github.com/davidjameslee/ListApp" target="_blank">Can be found here.</a></h4>
-						</div>
-					</div>
-				</div>
-				<!-- Keyboard -->
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="subsection-entry">
-						<div class="subsection-image">
-							<img src="../Resources/assets/KeyboardImg.jpg">
-						</div>
-						<div class="subsection-description">
-							<h3>Trinket Keyboard</h3>
-							<h4><a href="keyboard.html" target="_blank">Can be found here.</a></h4>
-						</div>
-					</div>
-				</div>
-				<!-- Website -->
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="subsection-entry">
-						<div class="subsection-image">
-							<img src="../Resources/assets/clouds.jpg" id="WebsiteThumb">
-						</div>
-						<div class="subsection-description">
-							<h3>Personal Website</h3>
-							<h4>Can be found here... Literally.</h4>
+							<h3>{{project.title}}</h3>
+							<h4 v-if="project.wip">(Work in Progress)</h4>
+							<h4><a :href="project.link" target="_blank">Can be found here.</a></h4>
 						</div>
 					</div>
 				</div>
@@ -221,24 +159,9 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 				<hr>
 
 				<div class="contact-link-bar">
-					<div  class="contact-link link-linkedin">
-						<a href="https://www.linkedin.com/in/dj6lee" target="_blank">
-							<i class="fa fa-linkedin-square"></i>
-						</a>
-					</div>
-					<div  class="contact-link link-lastfm">
-						<a href="http://www.last.fm/user/TheBroccOLee" target="_blank">
-							<i class="fa fa-lastfm-square"></i>
-						</a>
-					</div>
-					<div  class="contact-link link-github">
-						<a href="https://github.com/davidjameslee" target="_blank">
-							<i class="fa fa-github-square"></i>
-						</a>
-					</div>
-					<div  class="contact-link link-email">
-						<a href="mailto:info@djlee.xyz">
-							<i class="fa fa-envelope-square"></i>
+					<div v-for="link in contactLinks" :class="'contact-link ' + link.className">
+						<a :href="link.link" target="_blank">
+							<i :class="'fa ' + link.icon"></i>
 						</a>
 					</div>
 					<div class="contact-link-bar-text"></div>
