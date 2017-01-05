@@ -43,7 +43,29 @@ app.controller('indexController', function($scope) {
             imgUrl: '../Resources/assets/clouds.jpg',
             wip: false
         }
-    ]
+    ];
+    $scope.contactLinks = [
+        {
+            link: 'https://www.linkedin.com/in/dj6lee',
+            icon: 'fa-linkedin-square',
+            className: 'link-linkedin'
+        },
+        {
+            link: 'http://www.last.fm/user/TheBroccOLee',
+            icon: 'fa-lastfm-square',
+            className: 'link-lastfm'
+        },
+        {
+            link: 'https://github.com/davidjameslee',
+            icon: 'fa-github-square',
+            className: 'link-github'
+        },
+        {
+            link: 'mailto:info@djlee.xyz',
+            icon: 'fa-envelope-square',
+            className: 'link-email'
+        }
+    ];
 });
 //Scripting like a Cassiopeia Main
 

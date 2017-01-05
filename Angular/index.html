@@ -141,10 +141,9 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 				<hr>
 
 				<div class="contact-link-bar">
-					<!-- Contact link: linkedIn -->
-					<!-- Contact link: LastFm -->
-					<!-- Contact link: github -->
-					<!-- Contact link: email -->
+					<div class="contact-link" ng-repeat="link in contactLinks">
+						<ng-include src="'templates/contact-link-entry.html'"></ng-include>
+					</div>
 					<div class="contact-link-bar-text"></div>
 
 					<div class="footer-drawer-toggle">
