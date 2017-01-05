@@ -51,7 +51,7 @@ var contactLinks = [
     },
     {
         link: 'http://www.last.fm/user/TheBroccOLee',
-        icon: 'fa-lastfm-square',
+        icon: 'fa-linkedin-square',
         className: 'link-lastfm'
     },
     {
@@ -151,19 +151,19 @@ function ContactFooter() {
 }
 
 //Rendering of components
-const JobElement = <JobEntries />;
+var JobElement = <JobEntries />;
 ReactDOM.render(
     JobElement,
     document.getElementById('jobs')
 );
 
-const ProjectElement = <ProjectEntries />;
+var ProjectElement = <ProjectEntries />;
 ReactDOM.render(
     ProjectElement,
     document.getElementById('projects')
 );
 
-const ContactFooterElement = <ContactFooter />
+var ContactFooterElement = <ContactFooter />;
 ReactDOM.render(
     ContactFooterElement,
     document.getElementById('footer')

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <!--
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMNNmdhddNNNMMMMNNmdhyhdmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -52,10 +52,9 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 	<link rel="stylesheet" type="text/css" href="../Resources/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="" id="light-theme" />
 	<link rel="stylesheet" type="text/css" href="../Resources/css/font-awesome.min.css" />
-
 </head>
 
-<body ng-controller="indexController">
+<body>
 	<!--Navbar-->
 	<nav id="navbar" class="navbar navbar-inverse topbar navbar-fixed-top navbar-solid">
 		<div class="navbar-header">
@@ -79,7 +78,9 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 		</ul>
 		</div>
 	</nav>
-	<div class="container-fluid">
+	
+	<!--Page-->
+	<div id="app" class="container-fluid">
 		<!--Name Plate-->
 		<a name="home"></a>
 		<div class="col-xs-12 col-md-12 name-div">
@@ -115,8 +116,41 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<h2>Work</h2>
 				<hr>
-				<div ng-repeat="job in jobs">
-					<ng-include src="'templates/job-entry.html'"></ng-include>
+				<!-- TTC -->
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/TTCLOGO.png">
+						</div>
+						<div class="subsection-description">
+							<h3>Toronto Transit Commission</h3>
+							<h4>C#.NET, Oracle & Crystal Reports Developer</h4>
+						</div>
+					</div>
+				</div>
+				<!-- IBI Group -->
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/IBIGROUPLOGO.jpg">
+						</div>
+						<div class="subsection-description">
+							<h3>IBI Group</h3>
+							<h4>Junior Developer</h4>
+						</div>
+					</div>
+				</div>
+				<!-- Veeva Systems -->
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/VEEVALOGO.jpg">
+						</div>
+						<div class="subsection-description">
+							<h3>Veeva Systems</h3>
+							<h4>Intern Performance Engineer</h4>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -127,8 +161,54 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
 				<h2>Projects</h2>
 				<hr>
-				<div ng-repeat="project in projects">
-					<ng-include src="'templates/project-entry.html'"></ng-include>
+				<!-- Pebble -->
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/PebblePulseSS.png">
+						</div>
+						<div class="subsection-description">
+							<h3>Pebble Watchface</h3>
+							<h4><a href="https://apps.getpebble.com/applications/55aa77fbc380d0dd7c00009e" target="_blank">Can be found here.</a></h4>
+						</div>
+					</div>
+				</div>
+				<!-- List App -->
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/ListAppSS.JPG">
+						</div>
+						<div class="subsection-description">
+							<h3>List Application</h3>
+							<h4>(Work in Progress)</h4>
+							<h4><a href="https://github.com/davidjameslee/ListApp" target="_blank">Can be found here.</a></h4>
+						</div>
+					</div>
+				</div>
+				<!-- Keyboard -->
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/KeyboardImg.jpg">
+						</div>
+						<div class="subsection-description">
+							<h3>Trinket Keyboard</h3>
+							<h4><a href="keyboard.html" target="_blank">Can be found here.</a></h4>
+						</div>
+					</div>
+				</div>
+				<!-- Website -->
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="subsection-entry">
+						<div class="subsection-image">
+							<img src="../Resources/assets/clouds.jpg" id="WebsiteThumb">
+						</div>
+						<div class="subsection-description">
+							<h3>Personal Website</h3>
+							<h4>Can be found here... Literally.</h4>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -141,8 +221,25 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 				<hr>
 
 				<div class="contact-link-bar">
-					<div class="contact-link" ng-repeat="link in contactLinks">
-						<ng-include src="'templates/contact-link-entry.html'"></ng-include>
+					<div  class="contact-link link-linkedin">
+						<a href="https://www.linkedin.com/in/dj6lee" target="_blank">
+							<i class="fa fa-linkedin-square"></i>
+						</a>
+					</div>
+					<div  class="contact-link link-lastfm">
+						<a href="http://www.last.fm/user/TheBroccOLee" target="_blank">
+							<i class="fa fa-lastfm-square"></i>
+						</a>
+					</div>
+					<div  class="contact-link link-github">
+						<a href="https://github.com/davidjameslee" target="_blank">
+							<i class="fa fa-github-square"></i>
+						</a>
+					</div>
+					<div  class="contact-link link-email">
+						<a href="mailto:info@djlee.xyz">
+							<i class="fa fa-envelope-square"></i>
+						</a>
 					</div>
 					<div class="contact-link-bar-text"></div>
 
@@ -163,9 +260,10 @@ using the philosophy that if it is stupid and works, then it isn't stupid! :^)
 		</div>
 
 	</div>
+
 	<script src="../Resources/js/jquery-2.1.4.min.js"></script>
 	<script src="../Resources/js/bootstrap.min.js"></script>
-	<script src="js/angular.min.js"></script>
+	<script src="js/vue.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/index.js"></script>
 </body>
