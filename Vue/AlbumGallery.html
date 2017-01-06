@@ -28,11 +28,13 @@
         <div class="albums">
             <div id="main" class="main">
                 <!-- Albums go Here-->
+                <album v-for="album in albums" :href="album.link" :src="album.imgUrl" />
             </div>
         </div>
     </div>
 
     <script src="../Resources/js/jquery-2.1.4.min.js"></script>
+    <script src="js/vue.min.js"></script>
     <script src="js/album-gallery.js"></script>
 </body>
 </html>
