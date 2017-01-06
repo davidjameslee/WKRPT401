@@ -1,0 +1,16 @@
+{
+  "name": "react_buildable",
+  "version": "1.0.0",
+  "description": "react that includes the gulp babel build",
+  "main": "index.html",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "David Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
+  }
+}

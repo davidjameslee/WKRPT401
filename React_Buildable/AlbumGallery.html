@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Gallery</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../Resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../Resources/css/album-gallery.css"/>
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-inverse topbar navbar-fixed-top navbar-locked transparent">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid music-art">
+        <div id="description" class="description">
+            <p>
+                Recently played music from Last.fm, many are from internet radio stations...
+            </p>
+        </div>
+
+        <div class="albums">
+            <div id="main" class="main">
+                <!-- Albums go Here-->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="dist/album-gallery.js"></script>
+    <script src="../Resources/js/jquery-2.1.4.min.js"></script>
+</body>
+</html>
