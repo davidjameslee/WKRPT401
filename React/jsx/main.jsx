@@ -51,7 +51,7 @@ var contactLinks = [
     },
     {
         link: 'http://www.last.fm/user/TheBroccOLee',
-        icon: 'fa-linkedin-square',
+        icon: 'fa-lastfm-square',
         className: 'link-lastfm'
     },
     {
@@ -137,18 +137,6 @@ function ContactLinks() {
         })}
     </div>
 }
-function ContactFooter() {
-    return (
-        <div className="contact-link-bar">
-            <ContactLinks />
-            <div className="contact-link-bar-text"></div>
-
-            <div className="footer-drawer-toggle">
-                <i id="footer-toggle-button" className="fa fa-angle-double-up"></i>
-            </div>
-        </div>
-    )
-}
 
 //Rendering of components
 var JobElement = <JobEntries />;
@@ -163,8 +151,8 @@ ReactDOM.render(
     document.getElementById('projects')
 );
 
-var ContactFooterElement = <ContactFooter />;
+var ContactLinksElement = <ContactLinks />;
 ReactDOM.render(
-    ContactFooterElement,
-    document.getElementById('footer')
+    ContactLinksElement,
+    document.getElementById('contacts')
 );
