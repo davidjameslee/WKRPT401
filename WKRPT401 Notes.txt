@@ -1,0 +1,69 @@
+WORK TERM REPORT 401
+
+Todos/Things to not forget LOL:
+----------------------------------
+Make/Update the title
+Update ECE Chair?
+----------------------------------
+
+I worked at autodesk as a javascript software developer working on an application framework as well as a new product transitioning from a research effort to a consumer product. Upon recieving our task for the new product we had team discussions over what direction we should take and how to tackle this great problem. One of the big choices was front end javascript framework. There are many frameworks out there and there are still new ones coming out. With many to choose from and each one having its own nuances, choosing the best framework is a complex decision. At Autodesk we felt it was better to choose the one that other teams were using for similar project to have more of a consistent codebase across projects and possibly reuse code as well as learn skills that may be useful in other projects we may undertake.
+
+This is what pushed me to investigate the frameworks on my own. Unfortunately with the changes and creation of these frameworks it is very difficult to keep up. I wanted to take this oppourtunity to at least figure out the differences for my self, so that if a similar choice appears in another workplace or I have to make a choice for an upcoming personal project, I wanted to be able to make an informed decision.
+
+
+Introduction
+-Why javascript/web
+-The reason for a front end framework
+-What frameworks are investigated here and who made them?
+-What criteria will be looked at
+-I will be reconstructing my website with all tech?
+
+For the Developer side
+-Setting up the environment
+-learning curve?
+-Lines of code
+-Build process (transpiling/browserify?)
+
+-Documentation
+-Community/Stackoverflow
+
+-Page load times
+-File sizes of dependencies
+
+
+
+Make a note of the React es6 module requirement (but note that babel can write to es5/browserify to bundle all the jsx...)
+Make notes of performance differences and notes about ease of use or lack there of as well as code length and additional dependencies!
+
+Discuss the choice of local files to avoid network delays for CDN and peak times! (It is the most controlled environment)
+
+///////////////
+Possibly during the react portion of the evaluation, explain the babel/gulp building phase. JSX is the proper way to go but its a bitch... Build step would be better,
+but to keep it consistent with the others I believe that this is the way to go. Maybe compile the scripts and compare that with babel'd on the fly and show that it
+could work but requires shit tonnes of more dependencies and processes!
+
+Note: Using ES6 is a much nice way and has advantages but comes at compatibility problems. List Stat that explains 90+% of users are not up to date etc...
+Discuss that this is a simple application, but more complex interfaces would benefit heavily from es6 modules components.
+
+JSX is the best way to do it, but involves some jumping through hoops, ie: class -> className
+
+Vue.js is pretty good, just finding help was slightly harder than expected... For example ready() which is used in a lot of posts is vue.js 1.0, it is changed to mounted
+in vue.js 2.0... A migration guide can be found but it isn't exactly explicit...
+
+Numbers to get:
+page load times (index/album gallery)
+Stack overflow articles
+file sizes of dependencies
+
+Figures/Tables
+Table for each performance load time
+figure of website/album gallery
+Graphs for comparision
+
+
+What is left to do:
+Glossary
+References
+Proofreading
+
+
